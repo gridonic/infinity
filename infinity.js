@@ -1,5 +1,5 @@
 //     (c) 2012 Airbnb, Inc.
-//     
+//
 //     infinity.js may be freely distributed under the terms of the BSD
 //     license. For all licensing information, details, and documentation:
 //     http://airbnb.github.com/infinity
@@ -347,7 +347,7 @@
   // Removes the ListView from the DOM and cleans up after it.
 
   ListView.prototype.remove = function() {
-    this.$el.remove();
+    this.$el.detach();
     this.cleanup();
   };
 
@@ -956,7 +956,7 @@
   // them.
 
   ListItem.prototype.remove = function() {
-    this.$el.remove();
+    this.$el.detach();
     removeItemFromPage(this, this.parent);
     this.cleanup();
   };
